@@ -3,13 +3,14 @@ import React from 'react'
 export default function Header(props) {
     const {countCartItems} = props
   return (
-    <header className='row block center'>
+    <header className='nav-head'>
         <div>
             <a href='#'>
                 <h1>Small Shopping Cart</h1>
             </a>
         </div>
-        <div><a href='#/cart'>
+        <div className='nav-head-right'>
+            <a href='#/cart'>
             
             Cart { ' ' }
             {countCartItems ? (
@@ -18,7 +19,8 @@ export default function Header(props) {
               ''
             )}
 
-            </a> <a href='#/signin'>SignIn</a></div>
+            </a> <a href='#/signin'>SignIn</a>
+        </div>
     </header>
   )
 }
