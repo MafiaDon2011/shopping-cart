@@ -9,7 +9,7 @@ export default function Basket(props) {
   return (
     <aside className='block col-1'>
       <h2>Cart Items</h2>
-      <div>{cartItems.length === 0 && <div>Cart Is Empty</div>}</div>
+      <div>{cartItems.length === 0 && <div>Cart is empty, add something to cart!</div>}</div>
       {cartItems.map((item) => (
         <div key={item.id} className="row">
           <div className='col-2'>{item.name}</div>
@@ -24,7 +24,7 @@ export default function Basket(props) {
       ))}
       {cartItems.length !== 0 && (
         <>
-          <hr></hr>
+          <hr />
           <div className='row'>
             <div className='col-2'>Items Price</div>
             <div className='col-1 text-right'>${itemPrice.toFixed(2)}</div>
@@ -40,6 +40,12 @@ export default function Basket(props) {
           <div className='row'>
             <div className='col-2'><strong>Total Price</strong></div>
             <div className='col-1 text-right'><strong>${totalPrice.toFixed(2)}</strong></div>
+          </div>
+          <hr />
+          <div className='row'>
+            <button onClick={() => alert('Implement Checkout')}>
+              Checkout
+            </button>
           </div>
         </>
       )}
